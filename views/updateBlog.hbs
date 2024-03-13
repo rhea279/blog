@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update Blog</title>
+</head>
+<body>
+     <h1>Update Blog</h1>
+    <form action="/updateblog" method="post">
+        <label for="name">Name:-</label>
+        <input type="text" name="name" id="name" value="{{updateblog.name}}"><br>
+
+        <label for="class">Class:-</label>
+        <input type="text" name="className" id="className" value="{{updateblog.className}}"><br>
+
+        <label for="blog">Blog:-</label>
+        <textarea id="blog" cols="30" rows="10" name="blog">{{updateblog.blog}}</textarea><br>
+    <input type="hidden" name="blogId" value="{{updateBlog.blogId}}">
+        <button>Submit</button>
+    </form>
+</body>
+</html>

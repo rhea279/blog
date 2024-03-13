@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width={device-width}, initial-scale=1.0">
+    <title>BlogPage</title>
+    <link rel="stylesheet" href="blogpage.css">
+
+</head>
+{{>navbar}}
+    <h1>Blog Page</h1>
+
+<body>
+    {{#each blogs}}
+    <ul class="blog">
+        <li>{{this.name}}</li>
+        <li>{{this.className}}</li>
+        <li>{{this.blog}}</li>
+    <button><a href="/delete/{{this.blogId}}">Delete</a></button>
+    <button><a href="/update/{{this.blogId}}">Update</a></button>
+    </ul>
+    {{/each}}
+</body>
+</html>
